@@ -1,0 +1,197 @@
+#wrap {
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    #header {
+        width: 100%;
+        height: 55px;
+         border-bottom: 5px solid black;
+    }
+    .logo{
+        width: 15%;
+        height: 50px;
+        padding-left: 20px;
+        line-height: 50px;
+        float: left;
+    }
+    
+    
+    .navMenu{
+        width:82%;
+        height: 50px;
+        line-height: 50px;
+        float: right;
+        margin: 0 auto;
+        
+    }
+    .navMenu > ul {
+        margin: auto;
+        float: left;
+        padding: 0px;
+        display: table;
+        width: 90%;
+        height: 50px;
+        table-layout: fixed;
+    }
+    .navMenu > ul > li {
+        height: 50px;
+        display: table-cell;
+        text-align: center;
+    }
+    .navMenu > ul > li:hover { 
+        letter-spacing:10px;
+        
+        
+        
+    }
+    .navMenu > ul > li:hover::before {
+        width:100%; 
+    }
+    
+    .navMenu ul li { 
+        width:100%;
+        height:50px; 
+        line-height:60px;
+        padding-left:0px;
+        letter-spacing:1px;
+        position:relative;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .navMenu ul li a { 
+        width:100%;  
+        display:block; 
+        position:relative; 
+        z-index:3; 
+        text-decoration: none; 
+        color:#333; }
+    
+    .navMenu ul li ul{
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .navMenu ul li ul li{
+        display: none;
+        list-style: none;
+        background-color: #FFFFFF;
+        
+    }
+      #navMenu ul li ul li:hover{
+        background-color:blanchedalmond;
+    }
+    .login {
+        float: right;
+        width: 10%;
+        height: 50px;
+    }
+    .login > a > img {
+        width:50px;
+        height: 30x;
+        margin-top: 15px;
+        
+    }
+    .logo > a > img {
+        width: 118px;
+        height: 25px;
+        margin-top: 15px;
+    }
+    
+    #main{
+        width: 100%;
+        height: 100%;
+        
+    }
+   
+   
+    .myForm{
+        margin-top: 20px;
+        margin: auto;
+        width:70%;
+ 
+    }
+   
+    .myFormContents{
+        margin-top: 20px;
+        width: 100%;
+        height: 520px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        box-shadow: 3px 3px 10px -4px #000;    
+    }
+    .myFormContents:hover{
+        box-shadow: 1px 1px 10px 1px #2E50C3;
+    }
+    .snsAddthisBox{
+        width: 100%;
+        height: 35px;
+        border-bottom: 1px solid #d5d5d5;
+    } 
+    #print{
+        float: right;
+        margin-right: 10px;
+        margin-top: 1px;
+    }
+    #snsBtn{
+        margin-left: 10px;
+        width: 50%;
+        float: left;
+        margin-top: 7px;
+    
+    }
+        
+    .totalCount{
+        clear: both;
+        width:40%;
+        height: 150px;
+        float: left;
+        margin-left: 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 1px 1px #d5d5d5;
+        
+    }
+    .totalCount:hover{
+        box-shadow: 0px 0px 10px 3px #d5d5d5;
+    }
+    .jobPosting{
+        width: 40%;
+        height: 150px;
+        float: right;
+        margin-right: 5%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 1px 1px #d5d5d5; 
+    }
+    .jobPosting:hover{
+        box-shadow: 0px 0px 10px 3px #d5d5d5;
+    }
+    
+    .slider{
+        width: 90%;
+        height: 200px;
+        clear: both;
+        margin: auto;
+        margin-top: 20px;
+        box-shadow: 1px 1px 1px 1px #d5d5d5; 
+    }
+    .slider:hover{
+        box-shadow: 0px 0px 10px 3px #d5d5d5;
+    }
+    #footer{
+        margin-top: 5px;
+        width:100%;
+        height: 50px;
+        clear: both;
+
+    }
+    .coryright{
+        width: 70%;
+        margin: auto;
+    }
+    
+    span{
+        font-size: 12px;
+    }
