@@ -21,14 +21,17 @@ public interface PassDataInter {
 	String maxOth() throws DataAccessException;
 	String maxLang() throws DataAccessException;
 	String maxIntro() throws DataAccessException;
-	List<ProDto> selectAllP() throws DataAccessException;
+	List<ProDto> selectAllPro(String pro_id) throws DataAccessException;
+	List<EduDto> selectAlledu(String edu_id) throws DataAccessException;
+	List<MilDto> selectAllmil(String mil_id) throws DataAccessException;
+	List<IntroDto> selectAllIntro(String intro_id) throws DataAccessException;
+	void updateIntro(IntroDto lins) throws DataAccessException;
+	void updatePro(ProDto pins) throws DataAccessException;
+	void updateEdu(EduDto eins) throws DataAccessException;
+	void updateMil(MilDto mins) throws DataAccessException;
 	void insertPro(ProDto pins) throws DataAccessException;
-	void insertEdu1(EduDto eins) throws DataAccessException;
-	void insertEdu2(EduDto eins) throws DataAccessException;
-	void insertEdu3(EduDto eins) throws DataAccessException;
+	void insertEdu(EduDto eins) throws DataAccessException;
 	void insertMil(MilDto mins) throws DataAccessException;
-	void insertLang1(LangDto lains) throws DataAccessException;
-	void insertLang2(LangDto lains) throws DataAccessException;
-	void insertLang3(LangDto lains) throws DataAccessException;
+	void insertLang(LangDto lains) throws DataAccessException;
 	void insertIntro(IntroDto lins) throws DataAccessException;
 }

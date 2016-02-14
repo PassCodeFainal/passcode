@@ -3,8 +3,124 @@ package pass.vo;
 import java.sql.Date;
 
 public class EduDto {
-	private String edu_no1, edu_no2, edu_no3, edu_no4, edu_no5;
+	private String edu_no, edu_school, edu_major,edu_submajor, edu_grade, edu_sdate, edu_edate;
+	private String db_edu_no, db_edu_school, db_edu_major,db_edu_submajor, db_edu_grade, db_edu_sdate, db_edu_edate;
 	private String edu_id;
+
+	public String getDb_edu_no() {
+		return db_edu_no;
+	}
+
+	public void setDb_edu_no(String db_edu_no) {
+		this.db_edu_no = db_edu_no;
+	}
+
+	public String getDb_edu_school() {
+		return db_edu_school;
+	}
+
+	public void setDb_edu_school(String db_edu_school) {
+		this.db_edu_school = db_edu_school;
+	}
+
+	public String getDb_edu_major() {
+		return db_edu_major;
+	}
+
+	public void setDb_edu_major(String db_edu_major) {
+		this.db_edu_major = db_edu_major;
+	}
+
+	public String getDb_edu_submajor() {
+		return db_edu_submajor;
+	}
+
+	public void setDb_edu_submajor(String db_edu_submajor) {
+		this.db_edu_submajor = db_edu_submajor;
+	}
+
+	public String getDb_edu_grade() {
+		return db_edu_grade;
+	}
+
+	public void setDb_edu_grade(String db_edu_grade) {
+		this.db_edu_grade = db_edu_grade;
+	}
+
+	public String getDb_edu_sdate() {
+		return db_edu_sdate;
+	}
+
+	public void setDb_edu_sdate(String db_edu_sdate) {
+		this.db_edu_sdate = db_edu_sdate;
+	}
+
+	public String getDb_edu_edate() {
+		return db_edu_edate;
+	}
+
+	public void setDb_edu_edate(String db_edu_edate) {
+		this.db_edu_edate = db_edu_edate;
+	}
+
+	public String getEdu_no() {
+		return edu_no;
+	}
+
+	public void setEdu_no(String edu_no) {
+		this.edu_no = edu_no;
+	}
+
+
+	public String getEdu_school() {
+		return edu_school;
+	}
+
+	public void setEdu_school(String edu_school) {
+		this.edu_school = edu_school;
+	}
+
+	public String getEdu_major() {
+		return edu_major;
+	}
+
+	public void setEdu_major(String edu_major) {
+		this.edu_major = edu_major;
+	}
+
+	public String getEdu_submajor() {
+		return edu_submajor;
+	}
+
+	public void setEdu_submajor(String edu_submajor) {
+		this.edu_submajor = edu_submajor;
+	}
+
+	public String getEdu_grade() {
+		return edu_grade;
+	}
+
+	public void setEdu_grade(String edu_grade) {
+		this.edu_grade = edu_grade;
+	}
+
+	public String getEdu_sdate() {
+		return edu_sdate;
+	}
+
+	public void setEdu_sdate(String edu_sdate) {
+		this.edu_sdate = edu_sdate;
+	}
+
+	public String getEdu_edate() {
+		return edu_edate;
+	}
+
+	public void setEdu_edate(String edu_edate) {
+		this.edu_edate = edu_edate;
+	}
+	
+	private String edu_no1, edu_no2, edu_no3, edu_no4, edu_no5;
 
 	public String getEdu_id() {
 		return edu_id;

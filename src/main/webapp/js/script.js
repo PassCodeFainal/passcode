@@ -1,11 +1,9 @@
 $(function () {
         $(".navMenu li").hover(function () {
             $(this).find("li").stop().slideToggle();
-        }, function () {
-            $(this).find("li").stop().slideToggle();
+    
         });
     });
-
 function fNewWin(name, width, height)  {
 	 cw=screen.availWidth; 
 	 ch=screen.availHeight;

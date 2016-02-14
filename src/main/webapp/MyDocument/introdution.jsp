@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 <style type="text/css">
 #option {
 	background-color: white;
@@ -23,7 +24,6 @@
 #title {
 	background-color: white;
 	width: auto;
-	height: 30px;
 	line-height: 30px;
 	border: 5px groove;
 	border-radius: 10px 10px 10px 10px/10px 10px 10px 10px;
@@ -32,7 +32,7 @@
 }
 
 #main {
-	height: 500px;
+	height: 300px;
 	margin-top: 3%;
 }
 
@@ -52,7 +52,7 @@ button {
 
 #tx {
 	border: none;
-	height: 280px;
+	height: 240px;
 	width: 98%;
 	max-width: 98%;
 	overflow: hidden;
@@ -66,7 +66,6 @@ button {
 </style>
 <script>
 	$(document).ready(function() {
-				console.log($('#id').val());
 		$('#tx').keyup(function() {
 			var inputlen = $(this).val().length;
 			var leng = $('#dd').val();
@@ -83,10 +82,21 @@ button {
 
 		})
 		$('#save').click(function() {
-			if ($('#id').val()=="null") {
+			
+			if ($('#intro_id').val()=="null") {
 				alert("로그인 후 이용가능합니다.")
 				return;
 			} else {
+				if($('#intro_name_text').val()==""){
+					alert("제목을 입력하여 주세요.")
+					return;
+				}else if($('#title_text').val()==""){
+					alert("질문을 입력하여 주세요.")
+					return;
+				}else if($('#tx').val()==""){
+					alert("답변을 입력하여 주세요")
+					return;
+				}
 				intro.submit();
 				return;
 			}
@@ -96,6 +106,17 @@ button {
 			$('#title_text').val(null);
 			$('#tx').val(null);
 		}) 
+		
+		$('#load').click(function() {
+			if ($('#intro_id').val()=="null") {
+				alert("로그인 후 이용가능합니다.")
+				return;
+			} else {
+			url = "pass.go?loc=loadIntro";
+			window.open(url, "post", 
+					"toolbar=no, width=350, height=300, top=200, left=300, status=yes, scrollbars=yes, menubar=no");
+			}
+		})
 
 	});
 	
@@ -105,32 +126,36 @@ button {
 </head>
 <%
 	String suc = (String) request.getAttribute("suc");
-	String id = (String) session.getAttribute("idKey");
-	
+	String id = (String)session.getAttribute("idKey");
 %>
 <body>
+	<jsp:include page="../css/script.jsp"></jsp:include>
+	<jsp:include page="../index/index_top.jsp"></jsp:include>
 	<form action="pass.go?loc=saveIntro" method="post" name="intro">
+		<input type="hidden" id="update" value="n" name="update"/>
+		<input type="hidden" id="update_no" name="update_no"/>
 		<div id="option">
-			<button type="button" value="새로쓰기" id="reset">새로쓰기</button>
-			<button type="button" value="불러오기">불러오기</button>
-			<button type="button" value="저장하기" id="save">저장하기</button>
+			<input type="button" value="새로쓰기" id="reset">
+			<input type="button" value="불러오기" id="load">
+			<input type="button" value="저장하기" id="save">
 		</div>
 		<div id="title">
-			<input type="hidden" id="id" name="intro_id" value="<%=id%>" /> <span
-				><input type="text"name="intro_title"
-				placeholder="자기소개서 이름을 입력하여 주세요." id="intro_name_text"></span>
+			<input type="hidden" id="intro_id" name="intro_id" value="<%=id%>" />
+			 <span><input type="text" name="intro_title"
+				placeholder="제목을 입력하여 주세요." id="intro_name_text"></span>
 		</div>
 		<div id="title">
 			<span ><input type="text" id="title_text" name="intro_que"
-				placeholder="제목을 입력하여 주세요."></span>
+				placeholder="질문을 입력하여 주세요."></span>
 		</div>
 		<div id="main">
-			<textarea id="tx" placeholder="질문을 입력하여 주세요." name="intro_ans"></textarea>
+			<textarea id="tx" placeholder="답변을 입력하여 주세요." name="intro_ans"></textarea>
 			<input type="hidden" id="txt" />
 			<hr id="hr" />
-			<span id="type_num">0 </span>/ <input type="text" id="dd"
+			<span id="type_num">0</span>/ <input type="text" id="dd"
 				value="1000" />자
 		</div>
 	</form>
+	<jsp:include page="../index/index_bottom.jsp"></jsp:include>
 </body>
 </html>

@@ -20,7 +20,6 @@ public class PassService implements PassDataInter{
 	@Autowired
 	@Qualifier("resumeDao")
 	private ResumeDao redao;
-	
 	public String maxPro() throws DataAccessException{
 		String pno = redao.maxPro();
 		if(pno == null){
@@ -93,7 +92,6 @@ public class PassService implements PassDataInter{
 		}
 		return ono;
 	}
-	
 	public String maxLang() throws DataAccessException {
 		String lano = redao.maxLang();
 		if(lano == null){
@@ -104,7 +102,6 @@ public class PassService implements PassDataInter{
 		return lano;
 		
 	}
-	
 	public String maxIntro() throws DataAccessException{
 		String max =  redao.maxIntro();
 		if(max == null){
@@ -114,41 +111,51 @@ public class PassService implements PassDataInter{
 		}
 		return max;
 	}
-	
-	public List<ProDto> selectAllP() throws DataAccessException{
+	public List<ProDto> selectAllPro(String pro_id) throws DataAccessException{
 		List<ProDto> list = null;
-		list = redao.selectAllpro();
+		list = redao.selectAllpro(pro_id);
 		return list;
 	}
-	
+	public List<EduDto> selectAlledu(String edu_id) throws DataAccessException {
+		List<EduDto> list = null;
+		list = redao.selectAlledu(edu_id);
+		return list;
+	}
+	public List<MilDto> selectAllmil(String mil_id) throws DataAccessException {
+		List<MilDto> list = null;
+		list = redao.selectAlllis(mil_id);
+		return list;
+	}
+	public void updatePro(ProDto pins) throws DataAccessException {
+		redao.updatePro(pins);
+	}
+	public void updateEdu(EduDto eins) throws DataAccessException {
+		redao.updateEdu(eins);
+	}
+	public void updateIntro(IntroDto lins) throws DataAccessException {
+		redao.updateIntro(lins);
+	}
+	public void updateMil(MilDto mins) throws DataAccessException {
+		redao.updateMil(mins);
+	}
 	public void insertPro(ProDto pins) throws DataAccessException{
 		redao.insertPro(pins);
 	}
-	public void insertEdu1(EduDto eins) throws DataAccessException{
-		redao.insertEdu1(eins);
-	}
-	public void insertEdu2(EduDto eins) throws DataAccessException{
-		redao.insertEdu2(eins);
-	}
-	public void insertEdu3(EduDto eins) throws DataAccessException{
-		redao.insertEdu3(eins);
+	public void insertEdu(EduDto eins) throws DataAccessException{
+		redao.insertEdu(eins);
 	}
 	public void insertMil(MilDto mins) throws DataAccessException{
 		redao.insertMil(mins);
 	}
-	public void insertLang1(LangDto lains) throws DataAccessException{
-		redao.insertLang1(lains);
-	}
-	public void insertLang2(LangDto lains) throws DataAccessException{
-		redao.insertLang2(lains);
-	}
-	public void insertLang3(LangDto lains) throws DataAccessException{
-		redao.insertLang3(lains);
+	public void insertLang(LangDto lains) throws DataAccessException {
+		redao.insertLang(lains);
 	}
 	public void insertIntro(IntroDto lins) throws DataAccessException{
 		redao.insertIntro(lins);
 	}
-
-
-	
+	public List<IntroDto> selectAllIntro(String intro_id) throws DataAccessException{
+		List<IntroDto> list = null;
+		list = redao.selectAllIntro(intro_id);
+		return list;
+	}
 }
